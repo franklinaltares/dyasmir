@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Social Innovation Research Center</ion-title>
+    <ion-title>Survey Questionaire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>Personal Information Data</h1>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="6">
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" size-sm="6">
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" size-sm="6">
+        <ion-item>
+          <ion-label position="floating">Middle Initial</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" size-sm="6">
+        <ion-item>
+          <ion-label position="floating">Prefix</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label position="floating">Age:</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Birthdate: {{ formattedBirthdate }}</ion-label>
+    <ion-datetime
+      presentation="date"
+      label-placement="stacked"
+      alignment="end"
+      [(ngModel)]="birthdate"
+      (ionChange)="onBirthdateChange($event)"
+      [value]="formattedBirthdate"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Contact Number"
+      type="Number"
+      placeholder="09XXXXXXXXX"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select label="Sex" label-placement="floating">
+      <ion-select
+        [(ngModel)]="selectedGender"
+        (ngModelChange)="onGenderChange($event)"
+      >
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+      </ion-select>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-select label="Status" label-placement="floating">
+      <ion-select
+        [(ngModel)]="selectedStatus"
+        (ngModelChange)="onStatusChange($event)"
+      >
+        <ion-select-option value="Single">Single</ion-select-option>
+        <ion-select-option value="Married">Married</ion-select-option>
+        <ion-select-option value="Widowed">Widowed</ion-select-option>
+        <ion-select-option value="Separated">Separated</ion-select-option>
+      </ion-select>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Nationality" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Occupation" type="text" placeholder=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select label="Highest Education" label-placement="floating">
+      <ion-select
+        [(ngModel)]="selectedSchool"
+        (ngModelChange)="onSchoolChange($event)"
+      >
+        <ion-select-option value="None">None</ion-select-option>
+        <ion-select-option value="Elementary">Elementary</ion-select-option>
+        <ion-select-option value="High School">High School</ion-select-option>
+        <ion-select-option value="Tertiary High School"
+          >Tertiary High</ion-select-option
+        >
+        <ion-select-option value="College">College</ion-select-option>
+      </ion-select>
+    </ion-select>
+  </ion-item>
+  <ion-button (click)="generateExcelFile()">Download Excel File</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title
+      >Batangas State University The National Engineering University
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,29 @@
+ion-select {
+    --background: #ff0000; // custom background color
+    --color: #ffffff; // custom text color
+    --border-radius: 5px; // custom border radius
+    --border-width: 1px; // custom border width
+    --border-color: #ff0000; // custom border color
+  }
+  
+  ion-select-option {
+    --background: #ff0000; // custom background color for options
+    --color: #ffffff; // custom text color for options
+  }ion-select {
+    --background: #ffffff; // white background
+    --color: #000000; // black text
+    --border-radius: 5px; // border radius
+    --border-width: 1px; // border width
+    --border-color: #cccccc; // light gray border color
+    --padding-start: 10px; // left padding
+    --padding-end: 10px; // right padding
+    --min-height: 40px; // minimum height
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // box shadow
+  }
+  
+  ion-select-option {
+    --background: #f5f5f5; // light gray background for options
+    --color: #000000; // black text for options
+    --padding-start: 10px; // left padding
+    --padding-end: 10px; // right padding
+  }

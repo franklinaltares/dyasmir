@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Batangas State University - TNEU</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollY]="true">
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Survey Respondent Agreement</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>You are invited to participate in a research project about leadership and recruitment for gender
+      diversity in the construction industry. This online survey should take about 10 to 15 minutes to complete.
+      Participation is voluntary, and responses will be kept anonymous to the degree permitted by the technology
+      being used. You have the option to not respond to any affirm that you are at least 18 years of age. There
+      are no direct benefits, risks, or compensation to you for participating in the study. All study data will be
+      collected through an online survey-collection program called Quatrics. Quatrics is a secure site with SAS 70
+      certification for regorous privacy standard. Any data that you provided through this program will be encrypted
+      for security purposes using Secure Socket Layers (SSL). Only the study investigators will have access to the 
+      databon Quatrics. To protect your privacy, all participants'IP address will be marked by Quatrics and will be
+      unavailable to, and unidentifiable by, investigators or other. Quatrics' privacy policy can be obtained at
+      http:www.qualtrics.com/privacy-statement. If you have any questions about the research, please contact the
+      Principal Investigator, Anne Morello, Master's student in the Department of Construction Management, via email
+      at "morelloanne.ufl.edu" or the Faculty Advisor, Dr. Raymond Issa at "raymond-issa.ufl.edu". For information for you
+      rights as a research participant, contact the IRB at 352-392-0433.</p>
+  </ion-card-content>
+
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>I have read the above information and agree to participate in this research project.</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>I do not agree to participate in the reseach project.</ion-label>
+  </ion-item>
+
+  <div style="text-align: center;margin-top:30px;">
+    <div style="display: flex; justify-content: center">
+      <canvas #signPadCanvas (touchstart)="startSignPadDrawing($event)" (touchmove)="movedFinger($event)"></canvas>
+    </div>
+    <ion-button class="btn btn-success" color="secondary" (click)="saveSignPad()">Save</ion-button>
+    <ion-button class="btn btn-danger" (click)="clearSignPad()">Clear</ion-button>
+    <ion-button class="btn btn-warning" (click)="undoSign()">Undo</ion-button>
+    <div>
+      <span style="font-family: monospace;">Write the signature and click on Save</span>
+      <div>
+        <img src='{{ signImage }}' />
+      </div>
+ </div>
+</div>
+
+    <ion-card-content style="display: flex; justify-content: flex-end;">
+      <ion-button shape="round">Next</ion-button>
+    </ion-card-content>
+ 
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Social Innovation Research Center</ion-title>
+  </ion-toolbar>
+</ion-footer>
